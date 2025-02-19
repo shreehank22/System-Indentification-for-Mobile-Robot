@@ -1,0 +1,12 @@
+sample_time = 1;
+control_input = out.CI;
+position = out.Position; 
+velocity = out.Velocity;
+acceleration = out.Acceleration;
+data = iddata([position,velocity,acceleration], control_input, sample_time);
+data.InputName = 'Control Input';
+data.OutputName = {'Position', 'Velocity','Acceleration'};
+data.TimeUnit = 'seconds';
+n = 3;
+sys = ssest(data, n);
+disp(sys);
