@@ -92,9 +92,3 @@ System-Indentification-for-Mobile-Robot/
 
 **Shreehan Kate**
 For academic or collaborative inquiries, feel free to connect.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
