@@ -4,17 +4,17 @@ This repository contains MATLAB and Simulink-based implementation of a **data-dr
 
 ---
 
-## 📌 Key Features
+##  Key Features
 
-* ✅ **System Identification** using the N4SID algorithm
-* ✅ **Data-driven modeling** from acceleration and control input signals
-* ✅ **PID Controller Design** using the Ziegler-Nichols method
-* ✅ **Validation through Simulation** using MATLAB/Simulink
-* ✅ Demonstrates effective **linear control of nonlinear system dynamics**
+*  **System Identification** using the N4SID algorithm
+*  **Data-driven modeling** from acceleration and control input signals
+*  **PID Controller Design** using the Ziegler-Nichols method
+*  **Validation through Simulation** using MATLAB/Simulink
+*  Demonstrates effective **linear control of nonlinear system dynamics**
 
 ---
 
-## 🧠 Methodology
+##  Methodology
 
 1. **Data Collection:** Acceleration and control input data from a mobile robot are used as the basis for identification.
 
@@ -35,7 +35,7 @@ This repository contains MATLAB and Simulink-based implementation of a **data-dr
 
 ---
 
-## 📁 Repository Contents
+##  Repository Contents
 
 ```
 System-Indentification-for-Mobile-Robot/
@@ -47,7 +47,7 @@ System-Indentification-for-Mobile-Robot/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ### Prerequisites
 
@@ -79,7 +79,7 @@ System-Indentification-for-Mobile-Robot/
 
 ---
 
-## 📊 Results
+##  Results
 
 * Accurate identification of the system dynamics using N4SID
 * PID controller tuned for fast response and minimal overshoot
@@ -88,7 +88,7 @@ System-Indentification-for-Mobile-Robot/
 ---
 
 
-## 👨‍💻 Author
+##  Author
 
 **Shreehan Kate**
 For academic or collaborative inquiries, feel free to connect.
