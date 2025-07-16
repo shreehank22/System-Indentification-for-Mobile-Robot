@@ -73,7 +73,8 @@ System-Identification-for-Mobile-Robot/
 3. Launch and simulate the control architecture:
 
    ```matlab
-   open('Final_prob.slx')
+   open('Overall_ControlArchitecture.slx')
+   open('DatacurationforN4SID.slx')
    ```
 
 ## Results
