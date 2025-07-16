@@ -1,12 +1,18 @@
-sample_time = 1;
-control_input = out.CI;
-position = out.Position; 
-velocity = out.Velocity;
-acceleration = out.Acceleration;
-data = iddata([position,velocity,acceleration], control_input, sample_time);
-data.InputName = 'Control Input';
-data.OutputName = {'Position', 'Velocity','Acceleration'};
-data.TimeUnit = 'seconds';
-n = 3;
-sys = ssest(data, n);
-disp(sys);
+sample_time = 0.01;
+% Dataset formulation of control input, position and velocity
+control_input = -out.controlinput;
+position = -out.position; 
+velocity = -out.velocity;
+output_matrix = [position, velocity];
+data_position = iddata(output_matrix, control_input, sample_time);
+data_position.InputName = {'Control Input'};
+data_position.OutputName = {'Position', 'Velocity'};
+data_position.TimeUnit = 'seconds';
+
+% system identification using N4SID
+n = 2;
+sys_discrete = n4sid(data_position, n);
+sys_continuous = d2c(sys_discrete);  
+
+% extracting matrices A,B,C,D for building the state-space model
+A=sys_continuous.A;B=sys_continuous.B;C=-sys_continuous.C;D=sys_continuous.D;
