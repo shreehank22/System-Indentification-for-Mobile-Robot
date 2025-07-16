@@ -1,6 +1,6 @@
 # System Identification and Control of a Mobile Robot
 
-This repository presents a MATLAB and Simulink-based workflow for designing a data-driven control system for a mobile robot. The approach involves identifying a linear approximation of the robot's nonlinear dynamics using the N4SID (Numerical Subspace State Space System IDentification) algorithm. The identified model is subsequently used for PID controller design and closed-loop simulation.
+This repository presents a MATLAB and Simulink-based workflow for designing a data-driven control system for a mobile robot. The approach involves identifying a linear approximation of the robot's nonlinear dynamics using the N4SID (Numerical Subspace State Space System IDentification) algorithm. The identified model is subsequently used for designing a PID controller and conducting closed-loop simulations.
 
 ## Overview
 
@@ -18,7 +18,7 @@ The objective is to design a linear controller that performs well on a nonlinear
 
 ### 1. Data Collection
 
-Acceleration data and control inputs from a mobile robot are recorded and used as the basis for system modeling.
+Acceleration data and control inputs from a mobile robot are recorded and used as the basis for modeling the system.
 
 ### 2. System Identification
 
