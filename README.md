@@ -1,94 +1,88 @@
-# System Identification for Mobile Robot
+# System Identification and Control of a Mobile Robot
 
-This repository contains MATLAB and Simulink-based implementation of a **data-driven control strategy** for a mobile robot. A linear state-space model of a nonlinear robotic system is identified using **Subspace State-Space System Identification (N4SID)** from acceleration and control input data. The identified model is then used for designing and tuning a PID controller, ensuring stable and optimal closed-loop performance.
+This repository presents a MATLAB and Simulink-based workflow for designing a data-driven control system for a mobile robot. The approach involves identifying a linear approximation of the robot's nonlinear dynamics using the N4SID (Numerical Subspace State Space System IDentification) algorithm. The identified model is subsequently used for PID controller design and closed-loop simulation.
 
----
+## Overview
 
-##  Key Features
+The objective is to design a linear controller that performs well on a nonlinear robotic platform by leveraging real input-output data and system identification techniques. The PID controller is tuned based on the identified dynamics and validated through simulation.
 
-*  **System Identification** using the N4SID algorithm
-*  **Data-driven modeling** from acceleration and control input signals
-*  **PID Controller Design** using the Ziegler-Nichols method
-*  **Validation through Simulation** using MATLAB/Simulink
-*  Demonstrates effective **linear control of nonlinear system dynamics**
+## Features
 
----
+* Discrete-time state-space model estimation using the N4SID algorithm
+* Data-driven modeling from acceleration and control input signals
+* PID controller tuning using the Ziegler-Nichols method
+* Closed-loop validation in Simulink
+* Demonstrates practical control of a nonlinear system using linear techniques
 
-##  Methodology
+## Methodology
 
-1. **Data Collection:** Acceleration and control input data from a mobile robot are used as the basis for identification.
+### 1. Data Collection
 
-2. **System Identification:**
+Acceleration data and control inputs from a mobile robot are recorded and used as the basis for system modeling.
 
-   * Employed the **N4SID algorithm** to estimate a discrete-time linear state-space model.
-   * Extracted system matrices (A, B, C, D) to represent the dynamics.
+### 2. System Identification
 
-3. **Controller Design:**
+* The N4SID algorithm is applied to derive a discrete-time state-space model.
+* System matrices $A, B, C, D$ are extracted to characterize the linearized system dynamics.
 
-   * Designed and tuned a **PID controller** using the **Ziegler-Nichols** tuning method.
-   * Ensured closed-loop stability and performance based on time-domain metrics.
+### 3. Controller Design
 
-4. **Simulation and Validation:**
+* A PID controller is designed and tuned using the Ziegler-Nichols method.
+* Controller parameters are selected to ensure fast response and minimal steady-state error.
 
-   * Simulated the control strategy in **Simulink** (`Final_prob.slx`).
-   * Demonstrated the efficacy of model-based control through step response and error tracking.
+### 4. Simulation and Validation
 
----
+* The control architecture is implemented in Simulink (`Final_prob.slx`).
+* Closed-loop performance is evaluated via step response, transient behavior, and tracking error metrics.
 
-##  Repository Contents
+## Repository Structure
 
 ```
-System-Indentification-for-Mobile-Robot/
+System-Identification-for-Mobile-Robot/
 │
-├── Algorithm_systemmodelestimation.m   # MATLAB script for model estimation using N4SID
-├── Final_prob.slx                      # Simulink model for closed-loop simulation
-├── README.md                           # Project documentation
+├── Algorithm_systemmodelestimation.m   % N4SID model estimation script
+├── DatacurationforN4SID.slx           % Data preprocessing/curation model
+├── Overall_ControlArchitecture.slx    % High-level control architecture
+├── README.md                          % Project documentation
 ```
 
----
-
-##  How to Run
+## Getting Started
 
 ### Prerequisites
 
-* MATLAB R2020a or later
+* MATLAB R2020a or newer
 * System Identification Toolbox
 * Control System Toolbox
 * Simulink
 
-### Steps
+### Steps to Run
 
-1. **Clone the repository:**
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/shreehank22/System-Indentification-for-Mobile-Robot.git
-   cd System-Indentification-for-Mobile-Robot
+   git clone https://github.com/shreehank22/System-Identification-for-Mobile-Robot.git
+   cd System-Identification-for-Mobile-Robot
    ```
 
-2. **Open MATLAB and run:**
+2. Open MATLAB and run the model estimation script:
 
    ```matlab
    Algorithm_systemmodelestimation
    ```
 
-3. **Open and run Simulink model:**
+3. Launch and simulate the control architecture:
 
    ```matlab
    open('Final_prob.slx')
    ```
 
----
+## Results
 
-##  Results
+* Accurate estimation of a discrete-time linear model from experimental data
+* PID controller achieves desirable performance (fast settling, low overshoot)
+* Simulink simulations confirm closed-loop stability and control effectiveness
 
-* Accurate identification of the system dynamics using N4SID
-* PID controller tuned for fast response and minimal overshoot
-* Simulink validation confirms the effectiveness of the control strategy
-
----
-
-
-##  Author
+## Author
 
 **Shreehan Kate**
-For academic or collaborative inquiries, feel free to connect.
+For academic collaboration, feedback, or inquiries, feel free to reach out via GitHub or email.
