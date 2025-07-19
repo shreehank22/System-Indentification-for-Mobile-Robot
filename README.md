@@ -83,6 +83,14 @@ System-Identification-for-Mobile-Robot/
 * PID controller achieves desirable performance (fast settling, low overshoot)
 * Simulink simulations confirm closed-loop stability and control effectiveness
 
+## **Documentation**
+
+For complete theoretical background, design equations, training pipeline, and result analysis, refer to:
+
+📄 SystemIdentificationandControlofMobileRobot.pdf
+
+---
+
 ## Author
 
 **Shreehan Kate**
