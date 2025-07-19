@@ -85,9 +85,9 @@ System-Identification-for-Mobile-Robot/
 
 ## **Documentation**
 
-For complete theoretical background, design equations, training pipeline, and result analysis, refer to:
+## Project Report
 
-📄 SystemIdentificationandControlofMobileRobot.pdf
+📄 [SystemIdentificationandControlofMobileRobot.pdf](SystemIdentificationandControlofMobileRobot.pdf)
 
 ---
 
